@@ -7,12 +7,12 @@ let users = [
     {
         firstName: "Jishnu",
         lastName: "t raj",
-        age: 22,
+        age: 22
     },
     {
         firstName: "John",
         lastName: "Dane",
-        age: 20,
+        age: 20
     },
 ];
 
@@ -22,7 +22,7 @@ router.get("/", (req, res) => {
 
 router.post("/", (req, res) => {
     console.log("Added user");
-    res.send("Added user");
+    console.log(req.body);
 });
 
 module.exports = router;
