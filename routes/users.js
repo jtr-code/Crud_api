@@ -19,10 +19,13 @@ let users = [
 router.get("/", (req, res) => {
     res.send(users);
 });
-
+ 
 router.post("/", (req, res) => {
-    console.log("Added user");
-    console.log(req.body);
+    
+    const user = req.body;
+    users.push(user);
+ 
+    res.send(`Added the user ${user.firstName} ${user.lastName} `);
 });
 
 module.exports = router;
